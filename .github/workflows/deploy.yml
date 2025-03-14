@@ -31,4 +31,6 @@ jobs:
             docker pull abhinan6u/sum-server:latest
             docker stop sum-server || true
             docker rm sum-server || true
+            docker ps -q --filter "ancestor=abhinan6u/sum-server:latest" | xargs -r docker stop
+            docker ps -q --filter "ancestor=abhinan6u/sum-server:latest" | xargs -r docker rm
             docker run -d -p 3000:3000 --name sum-server abhinan6u/sum-server:latest
