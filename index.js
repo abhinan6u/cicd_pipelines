@@ -9,6 +9,10 @@ app.get("/sum",(req,res)=>{
 
 
 })
+app.get('/me', (req, res) => {
+    res.send("Hey Abhinandu, congratulations!");
+});
+
 
 app.listen(3000,()=>{
     console.log("the app is listening")
