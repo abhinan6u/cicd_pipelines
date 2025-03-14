@@ -10,7 +10,7 @@ app.get("/sum",(req,res)=>{
 
 })
 app.get('/me', (req, res) => {
-    res.send("Hey Abhinandu, congratulations!");
+    res.send("Hey abhi, congratulations!");
 });
 
 
